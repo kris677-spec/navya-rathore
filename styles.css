@@ -1,0 +1,110 @@
+/* Overall Page Style */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Header and Tease Message Styling */
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#teaseMessage {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* Button Styles */
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  padding: 15px 40px;
+  font-size: 1.5em;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+  transform: translateY(-5px);
+}
+
+#yesButton {
+  background-color: #28a745;
+  color: white;
+}
+
+#noButton {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Success Message */
+#message {
+  margin-top: 30px;
+  font-size: 2em;
+  color: #333;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Picture Container */
+#imageContainer {
+  margin-top: 30px;
+  display: none;
+}
+
+#imageContainer img {
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 2s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
+  button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+  }
+
+  #imageContainer img {
+    width: 80%;
+  }
+}
